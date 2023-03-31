@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>Booking</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBusGO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Style Sheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/5fe52e4ff6.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5fe52e4ff6.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+        </script>
+    <script>
+        function req() {
+            var pathjson = "busesjson.json";
+            var ajax1 = new XMLHttpRequest();
+            var start = document.getElementById("start").value;
+            var noStops = document.getElementById("stops").checked;
+            var start = document.getElementById("start").value;
+            var dest = document.getElementById("dest").value;
+            var div = document.getElementById("results");
+            div.innerHTML = "";
+            ajax1.onreadystatechange = function () {
+                if (ajax1.readyState == 4) {
+                    try {
+                        var ajaxtext = JSON.parse(ajax1.responseText);
+                        console.log(ajaxtext);
+                        11
+                    } catch (err) {
+                        // SyntaxError: Unexpected end of JSON input
+                        console.log('error', err);
+                    }
+                    //alert(ajaxtext);
+                    var title = document.createElement("h1");
+                    title.textContent = "Buses from " + start + " to " + dest;
+                    div.appendChild(title);
+                    var myAjax = ajaxtext[dest];
+                    for (var i = 0; i < myAjax["buses"].length; i++) {
+                        var bus = myAjax["buses"][i];
+                        if (bus["stops"] == 0 || !noStops) {
+                            var p = document.createElement("p");
+                            p.textContent = "₹" + bus["price"] + " from " + bus["carrier"] + " with " + bus["stops"]
+                                + " stops" ;
+                            if (bus["price"] < 1000) {
+                                p.style.fontWeight = "bold";
+                            }
+                            div.appendChild(p);
+                        }
+                    }
+                }
+            }
+            ajax1.open("GET", pathjson, true);
+            ajax1.send();
+        }
+    </script>
+</head>
+
+<body class="booking-body">
+    <section id="signup-title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md">
+                <a href="index.html" class="navbar-brand">EBusGo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleId"
+                    aria-controls="navbarToggleId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarToggleId">
+                    <ul class="navbar-nav ms-auto" id="navbarTogglerId">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section id="booking-main">
+        <div>
+            <label>Start location: <input type="text" id="start" /></label>
+            <label>End location: <input type="text" id="dest" /></label>
+            <label>Non-stop? <input type="checkbox" id="stops"></label>
+            <button id="go" onclick="req()">Go!</button>
+        </div>
+        <div id="results">
+            <h1></h1>
+            <p></p>
+        </div>
+    </section>
+</body>
+
+</html>

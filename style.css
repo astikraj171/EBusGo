@@ -1,0 +1,239 @@
+/* Title Section */
+
+#title {
+  background-color: #B5F1CC;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+/* .navbar{
+    padding: 0 0 4.5rem;
+} */
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.25rem;
+
+}
+
+.container-fluid {
+  padding: 3% 13%;
+}
+
+.download {
+  margin-top: 10%;
+}
+
+.introSec {
+  padding: 0 13%;
+}
+
+.homeImg {
+  position: relative;
+  left: -25%;
+}
+
+/* Login Section */
+.btn1 {
+  text-align: center;
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #40a164);
+  background-image: -moz-linear-gradient(top, #000000, #40a164);
+  background-image: -ms-linear-gradient(top, #000000, #40a164);
+  background-image: -o-linear-gradient(top, #000000, #40a164);
+  background-image: linear-gradient(to bottom, #000000, #40a164);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+  padding: 20px 40px 20px 40px;
+  border: solid #ffffff 2px;
+  text-decoration: none;
+}
+
+.btn1:hover {
+  background: #304033;
+  background-image: -webkit-linear-gradient(top, #304033, #119c24);
+  background-image: -moz-linear-gradient(top, #304033, #119c24);
+  background-image: -ms-linear-gradient(top, #304033, #119c24);
+  background-image: -o-linear-gradient(top, #304033, #119c24);
+  background-image: linear-gradient(to bottom, #304033, #119c24);
+  text-decoration: underline;
+}
+
+
+.btn2 {
+  position: relative;
+  top: 30%;
+  left: 20%;
+}
+
+.btn3 {
+  position: relative;
+  top: 30%;
+  left: 34%;
+}
+
+#login {
+  padding: 10% 13%;
+  background-color: #CFFDE1;
+}
+
+.heading-login {
+  text-align: left;
+}
+
+/* Contributor */
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#contributor {
+  background-color: #B5F1CC;
+  padding: 5% 13% 5% 13%;
+}
+
+.profile {
+  border-radius: 50%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.profile-links {
+  text-align: center;
+  line-height: 1rem;
+  margin-bottom: 7px;
+
+}
+
+.profile-anchor {
+  font-size: 1.225rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+.profile-anchor:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.contributor-heading {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+/* Contact Us */
+
+#contact-us {
+  background-color: #CFFDE1;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 2.5% 13% 1%;
+}
+
+.email {
+  color: #000000;
+}
+
+.email-p {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.contact-heading {
+  padding-bottom: 2.5%;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* SignUp Page */
+
+
+
+#signup-title{
+  background-color: #B5F1CC;
+}
+
+#signup-form{
+  background-color: #CFFDE1;
+  
+  padding: 5% 13% 13%;
+}
+
+.gender{
+  display: inline;
+}
+
+
+td{
+  padding: 0 1%;
+  height:auto;
+}
+
+.error{
+  color: red;
+  font-size: 12px;
+}
+
+.submit-btn {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3c9431;
+  padding: 6px 15px 6px 15px;
+  text-decoration: none;
+}
+
+.submit-btn:hover {
+  background: #1fa32e;
+  text-decoration: none;
+}
+
+th, td {
+  padding: 15px;
+}
+
+/* Login Page */
+.login-body{
+  background-color: #CFFDE1
+}
+
+.login-form{
+  padding: 8% 13%;
+}
+
+/* Booking */
+#booking-main{
+  padding: 5% 13%;
+  background-color: #CFFDE1;
+}
+
+#results{
+  padding: 5% 0;
+}
+
+.booking-body{
+  background-color: #CFFDE1;
+}
+
+

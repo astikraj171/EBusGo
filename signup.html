@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Style Sheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/5fe52e4ff6.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5fe52e4ff6.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+        </script>
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section id="signup-title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md">
+                <a href="index.html" class="navbar-brand">EBusGo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleId"
+                    aria-controls="navbarToggleId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarToggleId">
+                    <ul class="navbar-nav ms-auto" id="navbarTogglerId">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- SignUp Form -->
+    <section id="signup-form">
+        <div  class="form">
+            <h1>Please Enter Your Details</h1>
+        <form action="myAction.php" name="myForm" mehtod="post" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type="text" size="20" name="firstName"></td>
+                    <td><p id="firstName" class="error"></p></td>
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type="text" size="20" name="lastName" ></td>
+                    <td><p id="lastName" class="error"></p></td>
+                </tr>
+                <tr>
+                    <td>Phone No: </td>
+                    <td><input type="number" name="phone" ></td>
+                    <td><p id="phone" class="error"></p></td>
+                </tr>
+                <tr>
+                    <td>Email Id: </td>
+                    <td><input type="email" name="email"></td>
+                    <td><p id="email" class="error"></p></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth: </td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td>
+                        <p class="gender"><input type="radio">&nbsp;Male&nbsp;&nbsp;</p>
+                        <p class="gender">&nbsp;&nbsp;<input type="radio">&nbsp;Female</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City: </td>
+                    <td><input type="text" name="city"></td>
+                    <td><p id="city" class="error"></p></td>
+                </tr>
+                <tr>
+                    <td>State: </td>
+                    <td><input type="text" name="state"></td>
+                    <td><p id="state" class="error"></p></td>
+                </tr>
+                <tr colspan="3">
+                    <td><button type="submit" class="submit-btn">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </section>
+    <script src="signup.js"></script>
+
+</body>
+
+</html>

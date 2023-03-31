@@ -1,0 +1,52 @@
+{
+    "Vellore": {
+        "start": "Chennai",
+        "buses": [
+            {
+                "carrier": "Delta",
+                "price": 812,
+                "stops": 2
+            },
+            {
+                "carrier": "TNSRTC",
+                "price": 1020,
+                "stops": 0
+            },
+            {
+                "carrier": "Delux",
+                "price": 1190,
+                "stops": 3
+            }
+        ]
+    },
+    "Bengaluru": {
+        "start": "Vellore",
+        "buses": [
+            {
+                "carrier": "TNSRTC",
+                "price": 782,
+                "stops": 1
+            },
+            {
+                "carrier": "Delta",
+                "price": 1562,
+                "stops": 2
+            },
+            {
+                "carrier": "KSRTC",
+                "price": 957,
+                "stops": 1
+            },
+            {
+                "carrier": "Delux",
+                "price": 687,
+                "stops": 3
+            },
+            {
+                "carrier": "Osmosis",
+                "price": 1458,
+                "stops": 1
+            }
+        ]
+    }
+}

@@ -9,7 +9,7 @@ function validate(){
     }
     else document.getElementById("username").innerHTML = "*please provide correct username";
     if (f == 1){
-        alert("form submitted successfully");
+        alert("login successfully");
         return true;
     }
     else return false;

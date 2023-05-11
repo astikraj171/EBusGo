@@ -138,6 +138,11 @@ h3 {
   padding-bottom: 5%;
 }
 
+.profile-description{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.24rem;
+}
+
 /* Contact Us */
 
 #contact-us {
